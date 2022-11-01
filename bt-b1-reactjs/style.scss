@@ -1,0 +1,65 @@
+.app1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  > h1 {
+    margin-top: 20px;
+  }
+}
+.app1 {
+  > div.ReviewCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    > div.Review {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      > div.Author {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        > img {
+          height: 400px;
+          width: 400px;
+        }
+        div.Info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          > div.Name {
+            font-size: 25px;
+            font-weight: 700;
+          }
+          > div.Position {
+              margin-top: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            color: aquamarine;
+          }
+        }
+      }
+      > div.Content {
+          margin-top: 30px;
+          width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        font-size: 15px;
+      }
+    }
+    >div.Control{
+        margin-top: 20px;
+    }
+  }
+}
