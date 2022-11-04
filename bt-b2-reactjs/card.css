@@ -1,0 +1,24 @@
+.heading{
+    text-align: center;
+}
+.user-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.User{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    width: 23%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
