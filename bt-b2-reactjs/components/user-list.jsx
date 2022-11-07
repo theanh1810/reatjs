@@ -1,5 +1,5 @@
 const UserList = ({ users }) => {
-    const list = users.map((user) => <User user={user} />)
+    const list = users.map((user) => <User user={user} key={ user.id}/>)
     
     return <div className="user-list">{list}</div>
 };
