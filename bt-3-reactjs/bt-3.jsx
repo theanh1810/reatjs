@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import TimeSlider from "react-input-slider";
+
 
 function PrevIcon(props) {
   return (
@@ -87,25 +86,28 @@ const audios = [
     src: "./audios/XuanOiOLaiChoi",
     title: "Xuân Ơi Ở Lại Chơi",
     artist: "Tăng Nhật Tuệ - Hoàng Yến Chibi - Tino",
+    img: "./images/xuan-oi-o-lai-choi.jpge",
   },
   {
     src: "./audios/NgayXuanLongPhungSumVay",
     title: "Ngày Xuân Long Phụng Sum Vầy",
     artist: "Bích Phương",
+    img: "./images/ngay-xuan-long-phung.jpg",
   },
   {
     src: "./audios/DoanXuanCa",
     title: "Đoản Xuân Ca",
     artist: "Bích Phương",
+    img: "./images/doan-xuan-ca.jpg",
   },
 ];
 
 const App = () => {
-  const audioRef = useRef();
-  const [audioIndex, setAudioIndex] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [isPlay, setPlay] = useState(false);
+  const audioRef = React.useRef();
+  const [audioIndex, setAudioIndex] = React.useState(0);
+  const [currentTime, setCurrentTime] = React.useState(0);
+  const [duration, setDuration] = React.useState(0);
+  const [isPlay, setPlay] = React.useState(false);
 
   const handleLoadedData = () => {
     setDuration(audioRef.current.duration);
@@ -133,7 +135,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <img className="Song-Thumbnail" src={TetImg} alt="tet" />
+      <img className="Song-Thumbnail" alt="tet" src={audios[audioIndex].img} />
       <h2 className="Song-Title">{audios[audioIndex].title}</h2>
       <p className="Singer">{audios[audioIndex].artist}</p>
       <div className="Control-Button-Group">
@@ -153,29 +155,7 @@ const App = () => {
           <NextIcon />
         </div>
       </div>
-      <TimeSlider
-        axis="x"
-        xmax={duration}
-        x={currentTime}
-        onChange={handleTimeSliderChange}
-        styles={{
-          track: {
-            backgroundColor: "#e3e3e3",
-            height: "2px",
-          },
-          active: {
-            backgroundColor: "#333",
-            height: "2px",
-          },
-          thumb: {
-            marginTop: "-3px",
-            width: "8px",
-            height: "8px",
-            backgroundColor: "#333",
-            borderRadius: 0,
-          },
-        }}
-      />
+      
       <audio
         ref={audioRef}
         src={audios[audioIndex].src}

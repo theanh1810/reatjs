@@ -1,0 +1,15 @@
+.square{
+    margin-top: 20px;
+    background-color: red;
+}
+
+.counter > button{
+    height: 50px;
+    width: 100px;
+
+}
+.counter{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
